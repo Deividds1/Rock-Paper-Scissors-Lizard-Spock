@@ -1,0 +1,52 @@
+* {
+    margin: o;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.modal {
+    gap: 15%;
+    position: absolute;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 15px;
+}
+
+.modal button {
+    cursor: pointer;
+    width: 20px;
+    border: none;
+    margin: auto;
+    background-color: transparent;
+}
+
+.modal h1 {
+    text-align: center;
+}
+
+@media (min-width: 850px) {
+    .modal {
+        gap: 0;
+        height: 60vh;
+        width: 25vw;
+        top: 15%;
+        right: 37.5%;
+    }
+
+    .modal h1 {
+        position: absolute;
+        text-align: left;
+        top: 6%;
+    }
+
+    .modal button {
+        position: absolute;
+        top: 8%;
+        right: 5%;
+    }
+}

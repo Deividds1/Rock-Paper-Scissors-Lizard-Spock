@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.app {
+    background: linear-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    height: 100vh;
+    width: 100vw;
+    padding-top: 40px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    width: 90vw;
+    border: 2px solid hsl(217, 16%, 45%);
+    margin: auto;
+    border-radius: 10px;
+    color: white;
+    max-width: 900px;
+}
+
+.scoreContainer {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.score {
+    color: hsl(229, 64%, 46%);
+}
+
+.number {
+    color: hsl(229, 25%, 31%);
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.container {
+    margin: 10vh auto;
+    width: 80vw;
+    height: 35vh;
+    max-width: 500px;
+    max-height: 600px;
+}
+
+img {
+    width: 70%;
+    height: 70%;
+}
+
+.circle {
+    position: relative;
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10vmax;
+    height: 10vmax;
+    background-color: white;
+    border-radius: 50%;
+
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.middle {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10%;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.scissors {
+    border: solid 8px hsl(39, 89%, 49%);
+}
+
+.paper {
+    border: solid 8px hsl(230, 89%, 62%);
+}
+
+.rock {
+    border: solid 8px hsl(349, 71%, 52%);
+}
+
+.spock {
+    border: solid 8px hsl(261, 73%, 60%);
+}
+
+.lizard {
+    border: solid 8px hsl(189, 59%, 53%);
+}
+
+footer {
+    text-align: center;
+
+}
+
+.containerNone {
+    display: none;
+}
+
+.Results {
+    display: block;
+    margin-bottom: 200px;
+}
+
+.ResultsNone {
+    display: none;
+}
+
+.button {
+    margin-top: 20%;
+    height: 5vh;
+    padding: 2%;
+    width: 30%;
+    border-radius: 10px;
+    border: 1px solid hsl(217, 16%, 45%);
+    background-color: hsl(237, 49%, 15%);
+    color: white;
+    font-size: larger;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+@media (min-width: 850px) {
+    .circle {
+        width: 8vmax;
+        height: 8vmax;
+    }
+
+
+    .container {
+        margin-top: 40px;
+    }
+
+    .button {
+        width: 150px;
+        margin-top: 0;
+        padding: 0;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        width: 100vw;
+        text-align: right;
+        padding: 20px;
+    }
+}
