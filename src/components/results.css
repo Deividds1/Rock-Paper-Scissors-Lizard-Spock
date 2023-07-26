@@ -11,6 +11,7 @@
 .btn-width {
     width: 100%;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 h2 {
@@ -33,10 +34,20 @@ h2 {
 
 .choose h2 {
     font-size: medium;
+    transition: background-color 0.5s ease;
+
 }
 
 .results-container {
     position: absolute;
     top: 50%;
     bottom: 50%;
+}
+
+.invisible-img {
+    display: none;
+}
+
+.invisible-h2 {
+    display: none;
 }

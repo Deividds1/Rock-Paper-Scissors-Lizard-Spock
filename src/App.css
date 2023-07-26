@@ -63,7 +63,13 @@ img {
     height: 10vmax;
     background-color: white;
     border-radius: 50%;
+    transition: background-color 0.5s ease;
 
+}
+
+.circle:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 .top {
@@ -126,7 +132,6 @@ footer {
 .button {
     margin-top: 20%;
     height: 5vh;
-    padding: 2%;
     width: 30%;
     border-radius: 10px;
     border: 1px solid hsl(217, 16%, 45%);

@@ -11,6 +11,7 @@ import Results from './components/Results';
 
 
 function App() {
+  const [display, setDisplay] = useState(false);
   const [modal, setModal] = useState(false);
   const [userOption, setUserOption] = useState(null);
   const [houseOption, setHouseOption] = useState("");
@@ -33,6 +34,7 @@ function App() {
     const randomOption = options[Math.floor(Math.random() * 5)];
     setTimeout(() => {
       setHouseOption(randomOption);
+      setDisplay(!display)
     }, 3000);
   };
 
@@ -56,6 +58,8 @@ function App() {
       <main>
         <div className={isUserChoice ? "Results" : "ResultsNone"}>
           <Results
+            display={display}
+            setDisplay={setDisplay}
             userOption={userOption}
             setUserOption={setUserOption}
             houseOption={houseOption}

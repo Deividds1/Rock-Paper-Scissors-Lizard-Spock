@@ -7,9 +7,21 @@ import spock from "../assets/icon-spock.svg";
 import "./results.css";
 
 function Results(props) {
-    const { userOption, houseOption, setScore } = props;
+
     const [results, setResults] = useState("");
     const [isButton, setIsButton] = useState(false);
+
+
+    const {
+        display,
+        setDisplay,
+        userOption,
+        setUserOption,
+        houseOption,
+        setHouseOption,
+        setScore,
+        setIsUserChoice,
+    } = props;
 
     useEffect(() => {
         determineWinner();
@@ -46,12 +58,13 @@ function Results(props) {
     };
 
     const playAgain = () => {
+        setDisplay(!display);
         props.setUserOption(null);
         props.setHouseOption("");
         setResults("");
         setIsButton(false);
         props.setIsUserChoice((currentValue) => {
-            console.log(currentValue);
+
             return !currentValue;
         });
     };
@@ -69,9 +82,10 @@ function Results(props) {
                     </div>
                 </div>
 
-                <div className="choose">
-                    <h2>THE HOUSE PICKED</h2>
-                    <div className={`circle ${houseOption}`}><img src={eval(houseOption)} alt="" /></div>
+                <div className={display ? "choose" : ""}>
+                    <h2 className={display ? "" : "invisible-h2"}>THE HOUSE PICKED</h2>
+                    <div className={display ? `circle ${houseOption}` : ""}>
+                        <img className={display ? "" : "invisible-img"} src={eval(houseOption)} alt="House pick" /></div>
 
                 </div>
             </div>
